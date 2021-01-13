@@ -1,0 +1,29 @@
+{
+    "name": "codesai/fizz-buzz",
+    "description": "Fizz Buzz Kata",
+    "config": {
+        "platform": {
+            "php": "7.3"
+        }
+    },
+    "type": "library",
+    "require": {
+        "phpunit/phpunit": "9.5"
+    },
+    "authors": [
+        {
+            "name": "Codesai",
+            "email": "contact@codesai.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Codesai\\TDD\\FizzBuzz\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "tests\\": "tests/"
+        }
+    }
+}
