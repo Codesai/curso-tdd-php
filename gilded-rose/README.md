@@ -39,8 +39,4 @@ Just for clarification, an item can never have its Quality increase above 50, ho
 
 ## References
 
-[Possible tests solution](https://gist.github.com/adelatorrefoss/c8a78f193a839ada78493f234f4fa6bb#file-test_gilded_rose-py)
-
-[A golden master](https://gist.github.com/adelatorrefoss/c8a78f193a839ada78493f234f4fa6bb#file-golden_master_gilded_rose-py)
-
 *Thanks to [Emily Bach for the Gilded Rose code](https://github.com/emilybache/GildedRose-Refactoring-Kata/tree/master/python)!*  
