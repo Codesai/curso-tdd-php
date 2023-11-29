@@ -1,0 +1,29 @@
+{
+    "name": "codesai/course-duration",
+    "description": "Course Duration Kata",
+    "config": {
+        "platform": {
+            "php": "7.4"
+        }
+    },
+    "type": "library",
+    "require": {
+        "phpunit/phpunit": "9.5"
+    },
+    "authors": [
+        {
+            "name": "Codesai",
+            "email": "contact@codesai.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Codesai\\TDD\\CourseDuration\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "tests\\": "tests/"
+        }
+    }
+}
