@@ -20,16 +20,23 @@ class Alarm
     {
         $psiPressureValue = $this->sensor->popNextPressurePsiValue();
 
-        if ($psiPressureValue < self::LOW_PRESSURE_THRESHOLD || $psiPressureValue > self::HIGH_PRESSURE_THRESHOLD) {
-            if(!$this->isAlarmOn) {
-               $this->isAlarmOn = true;
-               var_dump("Alarm activated!");
+        if (
+            $psiPressureValue < self::LOW_PRESSURE_THRESHOLD || $psiPressureValue > self::HIGH_PRESSURE_THRESHOLD
+        ) {
+            if(!$this->isAlarmOn()) {
+                $this->isAlarmOn = true;
+                print_r('Alarm activated');
             }
-        } else {
-            if($this->isAlarmOn) {
-               $this->isAlarmOn = false;
-               var_dump("Alarm deactivated!");
+        }else{
+            if($this->isAlarmOn()){
+                $this->isAlarmOn = false;
+                print_r('Alarm deactivated');
             }
         }
+    }
+
+    private function isAlarmOn(): bool
+    {
+        return $this->isAlarmOn;
     }
 }
