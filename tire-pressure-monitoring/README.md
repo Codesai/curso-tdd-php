@@ -14,43 +14,85 @@ Be able to test `Alarm`'s `check` function without changing the method signature
 ### Example of spying an interaction
 
 ```php
-/**
- * @test
- */
-public function shouldUseTheExternalCollaborator()
-{
-    $myCollaboratorProphecy = $this->prophesize('Collaborator');
-    /** @var Collaborator $collaborator */
-    $collaborator = $myCollaboratorProphecy->reveal();
-    $myClass = new MyClass($collaborator);
-    $myClass->run();
-    $myCollaboratorProphecy->collaborate()->shouldBeCalled();
+use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
+
+interface Collaborator {
+    public function collaborate(): void;
+}
+
+class MyClass {
+    private $collaborator;
+
+    public function __construct(Collaborator $collaborator) {
+        $this->collaborator = $collaborator;
+    }
+
+    public function run(): void {
+        $this->collaborator->collaborate();
+    }
+}
+
+class MyClassTest extends TestCase {
+
+   use ProphecyTrait;
+
+    /** @test */
+    public function should_change_me() {
+        $collaborator = $this->prophesize(Collaborator::class);
+        $myClass = new MyClass($collaborator->reveal());
+
+        $myClass->run();
+
+        $collaborator->collaborate()->shouldHaveBeenCalled();
+    }
 }
 ```
 
 ### Example of stubbing an interaction
 
 ```php
-/**
- * @test
- */
-public function shouldReturnTheCollaboratorResponse()
-{
-    $myCollaboratorProphecy = $this->prophesize('Collaborator');
-    $collaboratorResponse = 'collaborator response';
-    $myCollaboratorProphecy->collaborate()->willReturn($collaboratorResponse);
-    /** @var Collaborator $collaborator */
-    $collaborator = $myCollaboratorProphecy->reveal();
-    $myClass = new MyClass($collaborator);
-    $response = $myClass->run();
-    $this->assertEquals($collaboratorResponse, $response);
+use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
+
+interface Collaborator {
+    public function collaborate(): string;
+}
+
+class MyClass {
+    private $collaborator;
+
+    public function __construct(Collaborator $collaborator) {
+        $this->collaborator = $collaborator;
+    }
+
+    public function run(): string {
+        return $this->collaborator->collaborate();
+    }
+}
+
+class MyClassTest extends TestCase {
+    /**
+     * @test
+     */
+    public function shouldReturnTheCollaboratorResponse()
+    {
+        $collaborator = $this->prophesize(Collaborator::class);
+        $collaboratorResponse = 'collaborator response';
+        $collaborator->collaborate()->willReturn($collaboratorResponse);
+        $myClass = new MyClass($collaborator->reveal());
+        
+        $response = $myClass->run();
+        
+        $this->assertEquals($collaboratorResponse, $response);
+    }
 }
 ```
 
 ## Learnings
-How to build a Spy and a Stub manually.
-
 How to use a library to generate the test doubles.
+
+How to build a Spy and a Stub manually.
 
 ## References
 
