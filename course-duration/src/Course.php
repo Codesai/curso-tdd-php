@@ -29,7 +29,7 @@ class Course
 
     public function isShort(): bool
     {
-        $tenMinutes = 10 * 60;
+        $tenMinutes = 10;
         return $this->durationInMinutes < $tenMinutes;
     }
 
