@@ -3,12 +3,17 @@
     "description": "Fizz Buzz Kata",
     "config": {
         "platform": {
-            "php": "7.3"
+            "php": "8.3"
+        },
+        "allow-plugins": {
+            "infection/extension-installer": true
         }
     },
     "type": "library",
-    "require": {
-        "phpunit/phpunit": "9.5"
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "phpunit/php-code-coverage": "9.2.15",
+        "infection/infection": ">=0.26.13"
     },
     "authors": [
         {
