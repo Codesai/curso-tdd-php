@@ -1,6 +1,6 @@
 {
-    "name": "codesai/gilded_rose",
-    "description": "Gilded Rose Kata",
+    "name": "codesai/coffee_machine",
+    "description": "Coffee Machine",
     "config": {
         "platform": {
             "php": "8.3"
@@ -23,7 +23,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Codesai\\TDD\\GildedRose\\": "src/"
+            "Codesai\\TDD\\CoffeeMachine\\": "src/"
         }
     },
     "autoload-dev": {
