@@ -1,6 +1,6 @@
 {
-    "name": "codesai/tire_pressure_monitoring",
-    "description": "Tire Pressure Monitoring",
+    "name": "codesai/tire-pressure-variation",
+    "description": "Tire Pressure Variation",
     "config": {
         "platform": {
             "php": "8.3"
@@ -23,7 +23,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Codesai\\TDD\\TirePressureMonitoring\\": "src/"
+            "Codesai\\TDD\\TirePressureVariation\\": "src/"
         }
     },
     "autoload-dev": {

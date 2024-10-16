@@ -4,11 +4,11 @@ namespace tests;
 
 use PHPUnit\Framework\TestCase;
 
-class TirePressureMonitoringTest extends TestCase
+class AlarmTest extends TestCase
 {
 
     /** @test */
     public function should_change_me() {
-        $this->fail("change me!");
+        self::fail("change me!");
     }
 }
