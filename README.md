@@ -1,16 +1,19 @@
 # Katas
 
-## [Fizz Buzz](fizz-buzz/)
-Good kata to start doing TDD
+## Fizz Buzz
+Kata to start doing TDD.
 
-## [Gilded Rose](gilded-rose/)
-Refactoring kata
+## Password validator
+Kata to practice the importance of examples list and test order.
 
-## [Password validator](password-validator/)
-Kata to practice the importance of the test order.
+## Argent Rose
+Kata to practice TDD heuristics.
 
-## [Tire Pressure Variation](tire-pressure-monitoring/)
-Refactoring kata to start practicing with test doubles (spies and stubs).
+## Tire Pressure Variation
+Kata to practice TDD with test doubles.
 
-## [Coffee Machine](coffee-machine/)
-Good kata to learn Outside-in TDD with test doubles
+## Coffee Machine
+Kata to practice TDD with test doubles.
+
+## Awkward dependencies examples.
+Exercises to detect violations of FIRS (side-effects and sources of non determinism).
