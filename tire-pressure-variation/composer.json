@@ -1,6 +1,7 @@
 {
     "name": "codesai/tire-pressure-variation",
     "description": "Tire Pressure Variation",
+    "version": "1.0.0",
     "config": {
         "platform": {
             "php": "8.5"

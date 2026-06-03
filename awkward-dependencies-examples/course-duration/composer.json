@@ -1,5 +1,6 @@
 {
     "name": "codesai/course-duration",
+    "version": "1.0.0",
     "description": "Course Duration Kata",
     "config": {
         "platform": {

@@ -1,6 +1,7 @@
 {
     "name": "codesai/coffee_machine",
     "description": "Coffee Machine",
+    "version": "1.0.0",
     "config": {
         "platform": {
             "php": "8.5"

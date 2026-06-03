@@ -1,6 +1,7 @@
 {
     "name": "codesai/luhn-test",
     "description": "Luhn Test Kata",
+    "version": "1.0.0",
     "config": {
         "platform": {
             "php": "8.5"

@@ -1,5 +1,6 @@
 {
     "name": "codesai/trip-service",
+    "version": "1.0.0",
     "description": "Trip Service",
     "config": {
         "platform": {

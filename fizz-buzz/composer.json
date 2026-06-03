@@ -1,6 +1,7 @@
 {
     "name": "codesai/fizz-buzz",
     "description": "Fizz Buzz Kata",
+    "version": "1.0.0",
     "config": {
         "platform": {
             "php": "8.5"

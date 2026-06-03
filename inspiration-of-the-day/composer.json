@@ -1,6 +1,7 @@
 {
     "name": "codesai/inspiration-of-the-day",
     "description": "Inspiration of the day Kata",
+    "version": "1.0.0",
     "config": {
         "platform": {
             "php": "8.5"

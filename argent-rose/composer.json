@@ -1,6 +1,7 @@
 {
     "name": "codesai/argent-rose",
     "description": "Argent Rose Kata",
+    "version": "1.0.0",
     "config": {
         "platform": {
             "php": "8.5"

@@ -1,6 +1,7 @@
 {
     "name": "codesai/problematic-discount",
     "description": "Problematic Discount",
+    "version": "1.0.0",
     "config": {
         "platform": {
             "php": "8.5"
