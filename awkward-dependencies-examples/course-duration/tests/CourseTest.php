@@ -3,6 +3,7 @@
 namespace tests;
 
 use Codesai\TDD\CourseDuration\Course;
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
 class CourseTest extends TestCase
@@ -14,7 +15,7 @@ class CourseTest extends TestCase
         $this->course = new Course("macramé");
     }
 
-    /** @test */
+    #[Test]
     public function identifies_short_courses() {
         $this->course->start();
         $this->course->end();
@@ -22,12 +23,12 @@ class CourseTest extends TestCase
         self::assertTrue($this->course->isShort());
     }
 
-    /** @test */
+    #[Test]
     public function identifies_long_courses() {
         self::markTestIncomplete("TODO");
     }
 
-    /** @test */
+    #[Test]
     public function knows_the_course_title() {
         self::markTestIncomplete("TODO");
     }

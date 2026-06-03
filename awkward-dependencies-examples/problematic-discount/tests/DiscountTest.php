@@ -4,11 +4,12 @@ namespace tests;
 
 use Codesai\TDD\ProblematicDiscount\Discount;
 use Codesai\TDD\ProblematicDiscount\Money;
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
 class DiscountTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function should_change_me()
     {
         $discount = new Discount();
