@@ -5,11 +5,11 @@ namespace tests;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
-class MyMorningRoutineTest extends TestCase
+class LuhnTestTest extends TestCase
 {
+
     #[Test]
-    public function should_change_me()
-    {
+    public function should_change_me() {
         self::fail("change me!");
     }
 }

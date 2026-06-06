@@ -1,6 +1,6 @@
 {
-    "name": "codesai/argent-rose",
-    "description": "Argent Rose Kata",
+    "name": "codesai/luhn-test",
+    "description": "Luhn Test Kata",
     "version": "1.0.0",
     "config": {
         "platform": {
@@ -25,7 +25,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Codesai\\TDD\\ArgentRose\\": "src/"
+            "Codesai\\TDD\\LuhnTest\\": "src/"
         }
     },
     "autoload-dev": {

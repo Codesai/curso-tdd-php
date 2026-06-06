@@ -2,12 +2,13 @@
 
 namespace tests;
 
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
 class CoffeeMachineTest extends TestCase
 {
 
-    /** @test */
+    #[Test]
     public function should_change_me() {
         $this->fail("change me!");
     }
