@@ -10,10 +10,10 @@ class PureGreeter
             throw new \InvalidArgumentException("Hour must be between 0 and 23");
         }
 
-        if ($currentHour < 6 || $currentHour >= 20) {
-            return "¡Buenas noches ". $name ."!";
-        } elseif ($currentHour >= 6 && $currentHour < 12) {
+        if ($currentHour >= 6 && $currentHour < 12) {
             return "¡Buenos días " . $name ."!";
+        } elseif ($currentHour < 6 || $currentHour >= 20) {
+            return "¡Buenas noches ". $name ."!";
         } else {
             return "¡Buenas tardes " . $name ."!";
         }
