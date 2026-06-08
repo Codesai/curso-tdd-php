@@ -1,0 +1,21 @@
+<?php
+
+namespace Codesai\TDD\PureGreeter;
+
+class PureGreeter
+{
+    public function greet(int $currentHour, string $name)
+    {
+        if($currentHour < 0 || $currentHour > 23) {
+            throw new \InvalidArgumentException("Hour must be between 0 and 23");
+        }
+
+        if ($currentHour < 6 || $currentHour >= 20) {
+            return "¡Buenas noches ". $name ."!";
+        } elseif ($currentHour >= 6 && $currentHour < 12) {
+            return "¡Buenos días " . $name ."!";
+        } else {
+            return "¡Buenas tardes " . $name ."!";
+        }
+    }
+}
